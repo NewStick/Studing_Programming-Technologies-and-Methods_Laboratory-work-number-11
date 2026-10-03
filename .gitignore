@@ -1,0 +1,34 @@
+# Папки сборки
+x64/
+x86/
+Debug/
+Release/
+
+# Служебные папки Visual Studio
+.vs/
+ИЗ-21 - .*/
+
+# Пользовательские настройки (у каждого свои)
+*.user
+*.suo
+
+# Артефакты компиляции
+*.obj
+*.o
+*.pch
+*.ipch
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.iobj
+*.ipdb
+
+# IntelliSense / браузерная база
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
