@@ -23,6 +23,8 @@ void user_interface_show_task()
 	return;
 }
 
+// Функция для вызова пользовательского интерфейса в бесконечном цикле `while [значение]`
+// Функция проводит прос 
 bool user_interface_start_main()
 {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -70,4 +72,31 @@ bool user_interface_start_main()
 	}
 
 	return false;
+}
+
+void user_interface_start_task_1(char user_selection)
+{
+	switch (user_selection)
+	{
+		case '1':
+			break;
+
+		case '2':
+			break;
+
+		case '3':
+			break;
+	}
+
+	return;
+}
+
+void user_interface_start_task_2(char user_selection)
+{
+
+}
+
+void user_interface_start_task_3(char user_selection)
+{
+
 }
