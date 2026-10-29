@@ -50,59 +50,59 @@ void find_coordinates_and_values_more_then_element_c(double* user_array, int use
 	// Выделяем память для: 
 	// Счётчика найденых значений больших значения C
 
-	int counter_for_fiend_elements = 0;
+	//int counter_for_fiend_elements = 0;
 
 	// Реализуем цикл с перебором элементов пользовательского масисва
 	// Ищеём элементы, которые больше элемента C
 	// В случаях, когда элемент найден — увеличиваем значение счётчика
 
-	for (int i = 0; i < user_array_length; i++)
-	{
-		if (user_array[i] > element_c )
-		{
-			counter_for_fiend_elements++;
-		}
-	}
+	//for (int i = 0; i < user_array_length; i++)
+	//{
+	//	if (user_array[i] > element_c )
+	//	{
+	//		counter_for_fiend_elements++;
+	//	}
+	//}
 
 	// Выделяем память для: 
 	// 1. Массива элементов больших значения C
 	// 2. Значение j для перемещения по массиву
 
-	int* array_for_fiend_elements = new int[counter_for_fiend_elements];
-	int j = 0;
+	//int* array_for_fiend_elements = new int[counter_for_fiend_elements];
+	//int j = 0;
 
 	// Реализуем цикланалогичный прошлому
 	// Но в этот раз сохраняем элементы в новый созданный массив
 	
-	for (int i = 0; i < user_array_length; i++)
-	{
-		if (user_array[i] > element_c)
-		{
-			array_for_fiend_elements[j] = user_array[i];
-			j++;
-		}
-	}
+	//for (int i = 0; i < user_array_length; i++)
+	//{
+	//	if (user_array[i] > element_c)
+	//	{
+	//		array_for_fiend_elements[j] = user_array[i];
+	//		j++;
+	//	}
+	//}
 
 
 	// Выводим полученные результаты:
 	
 	// 1. Полученное от пользователя значение элемента C
-	std::cout << std::endl << "Ваше значение C = " << element_c;
+	//std::cout << std::endl << "Ваше значение C = " << element_c;
 	
 	// 2. Количество найденых элементов строго больших значения элемента C
-	std::cout << std::endl << "Количество элементов больших значения C: " << counter_for_fiend_elements;
+	//std::cout << std::endl << "Количество элементов больших значения C: " << counter_for_fiend_elements;
 
 	// 3. Значения найденых элементов строго больших значения элемента C
-	std::cout << std::endl << "Список найденых элементов: ";
+	//std::cout << std::endl << "Список найденых элементов: ";
 
-	for (int i = 0; i < counter_for_fiend_elements; i++)
-	{
-		std::cout << array_for_fiend_elements[i] << ", ";
-	}
+	//for (int i = 0; i < counter_for_fiend_elements; i++)
+	//{
+	//	std::cout << array_for_fiend_elements[i] << ", ";
+	//}
 
 	// Очищаем память от созданных массивов
-	delete[] array_for_fiend_elements;
-	delete[] user_array;
+	//delete[] array_for_fiend_elements;
+	//delete[] user_array;
 }
 
 void pipeline_task1_subtask1()

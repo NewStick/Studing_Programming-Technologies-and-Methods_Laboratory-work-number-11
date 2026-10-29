@@ -15,18 +15,17 @@ int main()
     std::cout << std::endl << "Разработчик: Куприянов Никита Сергеевич, ИЗ-21" << std::endl;
     std::cout << std::endl << " = = = = = = = = = = = = = = = = = = = " << std::endl << std::endl;
 
-    // Вывод списка доступных для решения задач
+    // Однократный вывод описания лабораторных заданий.
     user_interface_show_task();
+
     std::cout << std::endl << " = = = = = = = = = = = = = = = = = = = " << std::endl << std::endl;
 
-    // Флаг первого запуска
-    bool is_first_launch = false;
-    bool is_need_to_close_application = false;
+    // Основной цикл работы приложения.
+    bool should_exit = false;
 
-    // Вызов основного метода интерфейса
-    while (!is_need_to_close_application)
+    while (!should_exit)
     {
-        is_need_to_close_application = user_interface_start_main();
+        should_exit = user_interface_start_main();
     }
 
     std::cout << std::endl << "Программа завершает свою работу..." << std::endl;
