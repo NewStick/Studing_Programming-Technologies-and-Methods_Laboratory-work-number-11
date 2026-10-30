@@ -21,31 +21,22 @@ void user_interface_start_task_3();
 // Прототипы методов выполнения задания № 1
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Методы последовательного выполнения подзадач задания № 1.
 void pipeline_task1_subtask1();
 void pipeline_task1_subtask2();
 void pipeline_task1_subtask3();
 
-// Методы создания и заполнения одномерного массива.
-int user_array_get_length();
-double user_array_get_value(int iteration_number);
-double* user_array_create_and_get_values(int user_array_length);
-double get_value_for_element_c();
-
-// Метод поиска элементов массива, больших C.
-void find_coordinates_and_values_greater_than_c(double* user_array, int user_array_length, double element_c);
-
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Прототипы методов выполнения задания № 2
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// На текущем этапе публичные методы задания № 2 ещё не реализованы.
+
+void pipeline_task2_subtask1();
+void pipeline_task2_subtask2();
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Прототипы методов выполнения задания № 3
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// На текущем этапе публичные методы задания № 3 ещё не реализованы.
+void pipeline_task3_subtask1();
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

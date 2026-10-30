@@ -1,5 +1,4 @@
-﻿
-#include "connected_libraries.h"
+﻿#include "connected_libraries.h"
 
 // Получение длины массива от пользователя
 int user_array_get_length()
@@ -44,6 +43,8 @@ double* user_array_create_and_get_values(int user_array_length)
 
     return user_array;
 }
+
+#pragma region Задание 1.1
 
 // Получение значения элемента C
 double get_value_for_element_c()
@@ -109,6 +110,10 @@ void pipeline_task1_subtask1()
 
     return;
 }
+
+#pragma endregion
+
+#pragma region Задание 1.2
 
 // Получение длины массива — в массиве должно быть минимум три элемента
 int user_array_get_length_for_task_1_2()
@@ -290,11 +295,80 @@ void pipeline_task1_subtask2()
     return;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ЗАДАНИЕ 1.3. Временная заглушка до реализации перестройки массива
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#pragma endregion
 
+#pragma region Задание 1.3
+
+// Вывод элементов массива
+void print_user_array(double* user_array, int user_array_length)
+{
+    std::cout << std::endl << "Элементы массива:";
+
+    for (int i = 0; i < user_array_length; i++)
+    {
+        std::cout << std::endl << "Координата: " << i + 1 << "; Значение: " << user_array[i];
+    }
+
+    std::cout << std::endl;
+}
+
+// Перестройка массива: сначала отрицательные элементы, затем неотрицательные
+void rearrange_array_negative_and_nonnegative(double* user_array, int user_array_length)
+{
+    // Создание временного массива
+    double* temporary_array = new double[user_array_length];
+
+    int current_index = 0;
+
+    // Запись отрицательных элементов
+    for (int i = 0; i < user_array_length; i++)
+    {
+        if (user_array[i] < 0)
+        {
+            temporary_array[current_index] = user_array[i];
+            current_index++;
+        }
+    }
+
+    // Запись положительных элементов и нулей
+    for (int i = 0; i < user_array_length; i++)
+    {
+        if (user_array[i] >= 0)
+        {
+            temporary_array[current_index] = user_array[i];
+            current_index++;
+        }
+    }
+
+    // Перенос элементов из временного массива в исходный
+    for (int i = 0; i < user_array_length; i++)
+    {
+        user_array[i] = temporary_array[i];
+    }
+
+    // Освобождение временного массива
+    delete[] temporary_array;
+}
+
+// Последовательность выполнения подзадачи 1.3
 void pipeline_task1_subtask3()
 {
-    std::cout << std::endl << "Подзадача 1.3 пока не реализована.";
+    int user_array_length = user_array_get_length();
+    double* user_array = user_array_create_and_get_values(user_array_length);
+
+    std::cout << std::endl << "Исходный массив:";
+    print_user_array(user_array, user_array_length);
+
+    rearrange_array_negative_and_nonnegative(user_array, user_array_length);
+
+    std::cout << std::endl << "Массив после перестановки:";
+    print_user_array(user_array, user_array_length);
+
+    // Освобождение памяти исходного массива
+    delete[] user_array;
+
+    return;
 }
+
+#pragma endregion
+

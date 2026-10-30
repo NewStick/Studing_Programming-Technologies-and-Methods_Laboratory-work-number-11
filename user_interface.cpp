@@ -127,13 +127,11 @@ void user_interface_start_task_2()
     switch (user_select_subtask)
     {
         case '1':
-            // Здесь позднее будет вызов обработчика подзадачи 2.1.
-            std::cout << std::endl << "Подзадача 2.1 пока не реализована.";
+            pipeline_task2_subtask1();
             break;
 
         case '2':
-            // Здесь позднее будет вызов обработчика подзадачи 2.2.
-            std::cout << std::endl << "Подзадача 2.2 пока не реализована.";
+            pipeline_task2_subtask2();
             break;
 
         default:
@@ -154,7 +152,7 @@ void user_interface_start_task_3()
     std::cout << std::endl << "Задание № 3. Анализ текстового файла.";
         
     // Здесь позднее будет вызов функции анализа текстового файла.
-    std::cout << std::endl << "Обработка текстового файла пока не реализована.";
+    pipeline_task3_subtask1();
 
     return;
 }
